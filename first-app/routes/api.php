@@ -22,4 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware('api')->group(function () {
     Route::get('/hello', 'App\Http\Controllers\HelloController@hello');
+    Route::get('/hello-name', 'App\Http\Controllers\HelloController@helloName');
 });

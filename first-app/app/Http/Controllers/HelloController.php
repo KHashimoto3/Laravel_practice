@@ -11,4 +11,11 @@ class HelloController extends Controller
             'message' => 'Hello World!'
         ]);
     }
+
+    public function helloName(Request $request) {
+        $name = $request->query('name');
+        return response()->json([
+            'message' => "Hello $name!"
+        ]);
+    }
 }
